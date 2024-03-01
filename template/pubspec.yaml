@@ -3,7 +3,7 @@ description: Example Flutter app using JLogical Utils.
 publish_to: none
 version: 0.0.3+2
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ">=3.2.0 <4.0.0"
 dependencies:
   flutter:
     sdk: flutter
@@ -12,7 +12,7 @@ dependencies:
   jlogical_utils:
     git:
       url: "git@github.com:jaboyc/jlogical_utils.git"
-      ref: v3.2
+      ref: v3.3
       path: packages/jlogical_utils/jlogical_utils
   template_core:
     path: ../template_core
@@ -31,3 +31,5 @@ dependency_overrides:
   path: 1.8.3
   js: 0.6.5
   posix: 5.0.0
+  http: 0.13.5
+  google_fonts: 6.1.0

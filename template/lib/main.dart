@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:jlogical_utils/jlogical_utils.dart';
-import 'package:template/presentation/pages/home_page.dart';
 import 'package:template/presentation/pages_pond_component.dart';
 import 'package:template/presentation/style.dart';
 import 'package:template_core/pond.dart';
@@ -16,10 +15,9 @@ Future<void> main(List<String> args) async {
     loadingPage: StyledLoadingPage(),
     notFoundPage: StyledPage(
       body: Center(
-        child: StyledText.h1('Not Found!'),
+        child: StyledText.twoXl('Not Found!'),
       ),
     ),
-    initialRouteGetter: () => HomeRoute(),
   );
 }
 
