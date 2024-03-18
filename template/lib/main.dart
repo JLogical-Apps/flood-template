@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flood/flood.dart';
+import 'package:flutter/material.dart';
 import 'package:template/presentation/pages_pond_component.dart';
 import 'package:template/presentation/style.dart';
 import 'package:template_core/pond.dart';
@@ -30,18 +30,7 @@ Future<AppPondContext> buildAppPondContext() async {
   );
 
   final appPondContext = AppPondContext(corePondContext: corePondContext);
-  await appPondContext.register(DebugAppComponent());
-  await appPondContext.register(LogAppComponent());
-  await appPondContext.register(DeviceFilesAppComponent());
-  await appPondContext.register(FocusGrabberAppComponent());
-  await appPondContext.register(AuthAppComponent());
-  await appPondContext.register(DropAppComponent());
-  await appPondContext.register(ResetAppComponent());
-  await appPondContext.register(PortStyleAppComponent(overrides: []));
-  await appPondContext.register(StyleAppComponent(style: style));
-  await appPondContext.register(UrlBarAppComponent());
-  await appPondContext.register(EnvironmentBannerAppComponent());
-  await appPondContext.register(ShareAppComponent());
+  await appPondContext.register(FloodAppComponent(style: style));
   await appPondContext.register(TestingSetupAppComponent(onSetup: () async {
     if (shouldAddTestData) {
       await _setupTesting(corePondContext);
