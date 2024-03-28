@@ -18,7 +18,8 @@ Here are the steps to use this as a baseline for your project:
    with `Directory.current.parent / '{{NAME}}'` and `coreDirectory.parent / 'template'`
    with `coreDirectory.parent / '{{NAME}}'.
 9. Replace every instance of `com.example.template` with your app identifier.
-10. Search for `TODO` across the project to find what steps you should take to customize the project.
+10. Do a project-wide search for any instances of `template` and replace them with what you need for your app.
+11. Search for `TODO` across the project to find what steps you should take to customize the project.
 
 ## Workflow
 
