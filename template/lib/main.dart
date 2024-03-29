@@ -27,6 +27,9 @@ Future<AppPondContext> buildAppPondContext() async {
     loggerService: (corePondContext) => corePondContext.environment.isOnline
         ? LoggerService.static.console.withFileLogHistory(corePondContext.fileSystem.tempDirectory / 'logs')
         : LoggerService.static.console,
+    repositoryImplementations: (corePondContext) => [
+      FlutterFileRepositoryImplementation(),
+    ],
   );
 
   final appPondContext = AppPondContext(corePondContext: corePondContext);
