@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flood/flood.dart';
 
-const bool isLight = false;
-
 // TODO Customize your style.
 
-FlatStyle style = FlatStyle(
+Style style = FlatStyle(
   primaryColor: Color(0xff2d77bb),
-  backgroundColor: isLight ? Color(0xffeeeeee) : Color(0xff0B0F14),
+  backgroundColor: Color(0xff0B0F14),
 );
