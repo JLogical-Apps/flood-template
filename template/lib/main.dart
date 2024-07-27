@@ -42,5 +42,6 @@ Future<AppPondContext> buildAppPondContext() async {
 }
 
 Future<void> _setupTesting(CorePondContext corePondContext) async {
-  // TODO Set up test data here.
+  await corePondContext.authCoreComponent
+      .createAccount(AuthCredentials.email(email: 'test@test.com', password: 'password'));
 }
