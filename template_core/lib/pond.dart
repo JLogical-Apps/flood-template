@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flood_core/flood_core.dart';
+import 'package:template_core/features/todo/todo_repository.dart';
+import 'package:template_core/features/user/user_repository.dart';
 
 Future<CorePondContext> getCorePondContext({
   EnvironmentConfig? environmentConfig,
@@ -24,6 +26,9 @@ Future<CorePondContext> getCorePondContext({
     loggerService: loggerService,
     messagingService: messagingService,
   ));
+
+  await corePondContext.register(UserRepository());
+  await corePondContext.register(TodoRepository());
 
   // TODO Register repositories here.
 
