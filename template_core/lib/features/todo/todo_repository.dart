@@ -1,4 +1,5 @@
 import 'package:flood_core/flood_core.dart';
+
 import 'todo.dart';
 import 'todo_entity.dart';
 
@@ -9,5 +10,6 @@ class TodoRepository with IsRepositoryWrapper {
     Todo.new,
     entityTypeName: 'TodoEntity',
     valueObjectTypeName: 'Todo',
-  ).adapting('todo');
+  ).adapting('todo').withSecurity(RepositorySecurity.all(Permission.admin |
+      Permission.equals(PermissionField.propertyName(Todo.ownerField), PermissionField.loggedInUserId)));
 }

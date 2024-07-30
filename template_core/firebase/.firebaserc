@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "pond-automation-1"
+    "default": "pond-automation-1",
+    "production": "pond-automation-1"
   }
 }

@@ -78,4 +78,14 @@ Future<void> _setupTesting(CorePondContext corePondContext) async {
           ..completedProperty.set(i == 0), // Only the first Todo should be completed
       ));
   }
+
+  await corePondContext.dropCoreComponent.runWithoutSecurity(() async {
+    await corePondContext.dropCoreComponent.updateEntity(TodoEntity()
+      ..id = 'notYours'
+      ..set(
+        Todo()
+          ..nameProperty.set('Not Yours')
+          ..ownerProperty.set('someOtherId'),
+      ));
+  });
 }
