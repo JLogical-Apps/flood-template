@@ -4,6 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:template/presentation/pages/forgot_password_page.dart';
 import 'package:template/presentation/pages/home_page.dart';
 import 'package:template/presentation/pages/signup_page.dart';
+import 'package:template/utils/route_utils.dart';
 
 class LoginRoute with IsRoute<LoginRoute> {
   @override
@@ -13,7 +14,10 @@ class LoginRoute with IsRoute<LoginRoute> {
   LoginRoute copy() => LoginRoute();
 }
 
-class LoginPage with IsAppPage<LoginRoute> {
+class LoginPage with IsAppPageWrapper<LoginRoute> {
+  @override
+  AppPage<LoginRoute> get appPage => AppPage<LoginRoute>().onlyIfNotLoggedIn();
+
   @override
   Widget onBuild(BuildContext context, LoginRoute route) {
     final loginPort = useMemoized(() => Port.of({
@@ -61,7 +65,9 @@ class LoginPage with IsAppPage<LoginRoute> {
                   StyledButton.strong(
                     labelText: 'Sign Up',
                     onPressed: () async {
-                      context.push(SignupRoute());
+                      context.push(SignupRoute()
+                        ..initialEmailProperty.set(loginPort['email'])
+                        ..initialPasswordProperty.set(loginPort['password']));
                     },
                   ),
                 ],

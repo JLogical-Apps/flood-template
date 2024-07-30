@@ -3,6 +3,7 @@ import 'package:template/presentation/pages/forgot_password_page.dart';
 import 'package:template/presentation/pages/home_page.dart';
 import 'package:template/presentation/pages/login_page.dart';
 import 'package:template/presentation/pages/signup_page.dart';
+import 'package:template/presentation/pages/todo_details_page.dart';
 
 class PagesAppPondComponent with IsAppPondComponent {
   @override
@@ -11,5 +12,6 @@ class PagesAppPondComponent with IsAppPondComponent {
         LoginRoute(): LoginPage(),
         SignupRoute(): SignupPage(),
         ForgotPasswordRoute(): ForgotPasswordPage(),
+        TodoDetailsRoute(): TodoDetailsPage(),
       };
 }

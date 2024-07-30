@@ -1,12 +1,20 @@
 import 'package:flood/flood.dart';
 import 'package:flutter/material.dart';
 import 'package:template/presentation/pages/login_page.dart';
+import 'package:template/presentation/pages/todo_details_page.dart';
+import 'package:template/utils/route_utils.dart';
 import 'package:template_core/features/todo/todo.dart';
 import 'package:template_core/features/todo/todo_entity.dart';
 
 class HomeRoute with IsRoute<HomeRoute> {
+  static const onlyCompletedField = 'only_completed';
+  late final onlyCompletedProperty = field<bool>(name: onlyCompletedField).withFallback(() => false);
+
   @override
   PathDefinition get pathDefinition => PathDefinition.home;
+
+  @override
+  List<RouteProperty> get queryProperties => [onlyCompletedProperty];
 
   @override
   HomeRoute copy() {
@@ -16,22 +24,12 @@ class HomeRoute with IsRoute<HomeRoute> {
 
 class HomePage with IsAppPageWrapper<HomeRoute> {
   @override
-  AppPage<HomeRoute> get appPage => AppPage<HomeRoute>().withRedirect((context, route) async {
-        final loggedInUserId = context.authCoreComponent.loggedInUserId;
-        if (loggedInUserId == null) {
-          return LoginRoute().routeData;
-        }
-        return null;
-      });
+  AppPage<HomeRoute> get appPage => AppPage<HomeRoute>().onlyIfAccountExists();
 
   @override
   Widget onBuild(BuildContext context, HomeRoute route) {
     final loggedInUserId = useLoggedInUserIdOrNull();
-    final todosModel = useQuery(Query.from<TodoEntity>()
-        .where(Todo.ownerField)
-        .isEqualTo(loggedInUserId)
-        .orderByAscending(CreationTimeProperty.field)
-        .all());
+    final todosModel = useQuery(getTodosQuery(loggedInUserId, route.onlyCompletedProperty.value).all());
 
     return StyledPage(
       titleText: 'Todos',
@@ -78,6 +76,7 @@ class HomePage with IsAppPageWrapper<HomeRoute> {
                                   .updateEntity(todoEntity, (Todo todo) => todo..completedProperty.set(value));
                             },
                           ),
+                          onPressed: () => context.push(TodoDetailsRoute()..todoIdProperty.set(todoEntity.id!)),
                           actions: ActionItem.static.entityCrudActions(context,
                               entity: todoEntity,
                               duplicator: (Todo todo) => todo..nameProperty.update((name) => '$name - Copy')),
@@ -89,5 +88,18 @@ class HomePage with IsAppPageWrapper<HomeRoute> {
         ],
       ),
     );
+  }
+
+  Query<TodoEntity> getTodosQuery(String? loggedInUserId, bool onlyCompleted) {
+    Query<TodoEntity> query = Query.from<TodoEntity>()
+        .where(Todo.ownerField)
+        .isEqualTo(loggedInUserId)
+        .orderByAscending(CreationTimeProperty.field);
+
+    if (onlyCompleted) {
+      query = query.where(Todo.completedField).isEqualTo(true);
+    }
+
+    return query;
   }
 }

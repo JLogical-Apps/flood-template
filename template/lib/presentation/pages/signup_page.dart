@@ -2,12 +2,20 @@ import 'package:flood/flood.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:template/presentation/pages/home_page.dart';
+import 'package:template/presentation/pages/login_page.dart';
+import 'package:template/utils/route_utils.dart';
 import 'package:template_core/features/user/user.dart';
 import 'package:template_core/features/user/user_entity.dart';
 
 class SignupRoute with IsRoute<SignupRoute> {
+  late final initialEmailProperty = field<String>(name: 'initialEmail');
+  late final initialPasswordProperty = field<String>(name: 'initialPassword');
+
   @override
   PathDefinition get pathDefinition => PathDefinition.string('signup');
+
+  @override
+  List<RouteProperty> get hiddenProperties => [initialEmailProperty, initialPasswordProperty];
 
   @override
   SignupRoute copy() {
@@ -15,13 +23,23 @@ class SignupRoute with IsRoute<SignupRoute> {
   }
 }
 
-class SignupPage with IsAppPage<SignupRoute> {
+class SignupPage with IsAppPageWrapper<SignupRoute> {
+  @override
+  AppPage<SignupRoute> get appPage =>
+      AppPage<SignupRoute>().onlyIfNotLoggedIn().withParent((context, route) => LoginRoute());
+
   @override
   Widget onBuild(BuildContext context, SignupRoute route) {
     final signupPort = useMemoized(() => Port.of({
           'name': PortField.string().withDisplayName('Name').isNotBlank().isName(),
-          'email': PortField.string().withDisplayName('Email').isNotBlank().isEmail(),
-          'password': PortField.string().withDisplayName('Password').isNotBlank().isPassword(),
+          'email': PortField.string(initialValue: route.initialEmailProperty.value)
+              .withDisplayName('Email')
+              .isNotBlank()
+              .isEmail(),
+          'password': PortField.string(initialValue: route.initialPasswordProperty.value)
+              .withDisplayName('Password')
+              .isNotBlank()
+              .isPassword(),
           'confirmPassword': PortField.string()
               .withDisplayName('Confirm Password')
               .isNotBlank()
