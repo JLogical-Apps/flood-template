@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flood/flood.dart';
 import 'package:flutter/material.dart';
+import 'package:template/firebase_options.dart';
 import 'package:template/presentation/pages_pond_component.dart';
 import 'package:template/presentation/style.dart';
 import 'package:template_core/features/todo/todo.dart';
@@ -27,6 +28,15 @@ Future<void> main(List<String> args) async {
 
 Future<AppPondContext> buildAppPondContext() async {
   final corePondContext = await getCorePondContext(
+    initialCoreComponents: (context) => [
+      FirebaseCoreComponent(app: DefaultFirebaseOptions.currentPlatform),
+    ],
+    repositoryImplementations: (context) => [
+      FirebaseCloudRepositoryImplementation(),
+    ],
+    authServiceImplementations: (context) => [
+      FirebaseAuthServiceImplementation(),
+    ],
     environmentConfig: EnvironmentConfig.static.flutterAssets(),
     loggerService: (corePondContext) => corePondContext.environment.isOnline
         ? LoggerService.static.console.withFileLogHistory(corePondContext.fileSystem.tempDirectory / 'logs')
