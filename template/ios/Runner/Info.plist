@@ -54,5 +54,11 @@
 		<false/>
 		<key>UIStatusBarHidden</key>
 		<false/>
+        <key>NSPhotoLibraryUsageDescription</key>
+        <string>Required to upload a profile picture and assets to todos</string>
+        <key>NSCameraUsageDescription</key>
+        <string>Required to record videos to upload to todos.</string>
+        <key>NSMicrophoneUsageDescription</key>
+        <string>Required to record videos to upload to todos.</string>
 	</dict>
 </plist>

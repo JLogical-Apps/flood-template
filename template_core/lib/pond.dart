@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:flood_core/flood_core.dart';
+import 'package:template_core/features/todo/todo.dart';
 import 'package:template_core/features/todo/todo_repository.dart';
+import 'package:template_core/features/user/user.dart';
 import 'package:template_core/features/user/user_repository.dart';
 
 Future<CorePondContext> getCorePondContext({
@@ -9,6 +11,7 @@ Future<CorePondContext> getCorePondContext({
   FutureOr<List<CorePondComponent>> Function(CorePondContext context)? initialCoreComponents,
   List<RepositoryImplementation> Function(CorePondContext context)? repositoryImplementations,
   List<AuthServiceImplementation> Function(CorePondContext context)? authServiceImplementations,
+  List<AssetProviderImplementation> Function(CorePondContext context)? assetProviderImplementations,
   MessagingService? Function(CorePondContext context)? messagingService,
   LoggerService? Function(CorePondContext context)? loggerService,
   TaskRunner? Function(CorePondContext context)? taskRunner,
@@ -25,6 +28,11 @@ Future<CorePondContext> getCorePondContext({
     taskRunner: taskRunner,
     loggerService: loggerService,
     messagingService: messagingService,
+    assetProviders: (context) => [
+      UserProfilePictureAssetProvider(context),
+      TodoAssetProvider(context),
+    ],
+    assetProviderImplementations: assetProviderImplementations,
   ));
 
   await corePondContext.register(UserRepository());

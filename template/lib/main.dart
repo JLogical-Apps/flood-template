@@ -37,6 +37,9 @@ Future<AppPondContext> buildAppPondContext() async {
     authServiceImplementations: (context) => [
       FirebaseAuthServiceImplementation(),
     ],
+    assetProviderImplementations: (context) => [
+      FirebaseStorageAssetProviderImplementation(),
+    ],
     environmentConfig: EnvironmentConfig.static.flutterAssets(),
     loggerService: (corePondContext) => corePondContext.environment.isOnline
         ? LoggerService.static.console.withFileLogHistory(corePondContext.fileSystem.tempDirectory / 'logs')
