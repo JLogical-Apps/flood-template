@@ -13,8 +13,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/actions_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -30,8 +30,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/appwrite_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -39,10 +39,10 @@ packages:
     dependency: transitive
     description:
       name: archive
-      sha256: "22600aa1e926be775fa5fe7e6894e7fb3df9efda8891c73f70fb3262399a432d"
+      sha256: cb6a278ef2dbb298455e1a713bda08524a175630ec643a242c399c932a0a1f7d
       url: "https://pub.dev"
     source: hosted
-    version: "3.4.10"
+    version: "3.6.1"
   args:
     dependency: transitive
     description:
@@ -55,8 +55,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/asset_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -72,8 +72,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/auth_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -257,8 +257,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/drop_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -266,8 +266,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/environment_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -315,8 +315,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/firebase_ops"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -332,8 +332,8 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/flood/flood_cli"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -341,8 +341,8 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/flood/flood_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -486,8 +486,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/location_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -495,8 +495,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/log_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -528,8 +528,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/messaging_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -553,8 +553,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/model/model_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -562,8 +562,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/native_setup"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -587,8 +587,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/ops"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -612,8 +612,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/path_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -621,8 +621,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/persistence/persistence_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -634,20 +634,12 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.4.0"
-  pointycastle:
-    dependency: transitive
-    description:
-      name: pointycastle
-      sha256: "43ac87de6e10afabc85c445745a7b799e04de84cebaa4fd7bf55a5e1e9604d29"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.7.4"
   pond_cli:
     dependency: transitive
     description:
       path: "packages/pond/pond_cli"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -655,8 +647,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/pond_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -672,8 +664,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/port/port_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -681,8 +673,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/port_drop_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -754,8 +746,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/release"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -763,8 +755,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/type"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -828,9 +820,9 @@ packages:
     dependency: transitive
     description:
       path: "."
-      ref: "5055a63325774deecfd6bac53c51e7b08e999c22"
-      resolved-ref: "5055a63325774deecfd6bac53c51e7b08e999c22"
-      url: "git@github.com:SKnoedler/snapshot.git"
+      ref: "831db0de24842b104440554f9e3d4919fcb1db55"
+      resolved-ref: "831db0de24842b104440554f9e3d4919fcb1db55"
+      url: "git@github.com:bvoq/snapshot.git"
     source: git
     version: "0.2.5"
   source_map_stack_trace:
@@ -925,8 +917,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/task_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -966,8 +958,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/type_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -991,8 +983,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/user_device_token_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -1000,8 +992,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/utils/utils_core"
-      ref: "v4.1"
-      resolved-ref: "44199912835c3cf43320d4a422967b6f45b0777c"
+      ref: "v4.2"
+      resolved-ref: "832b7844c580007649655a0edce85fcd1252f38b"
       url: "git@github.com:JLogical-Apps/flood.git"
     source: git
     version: "0.0.1"
@@ -1081,8 +1073,8 @@ packages:
     dependency: transitive
     description:
       path: "."
-      ref: master
-      resolved-ref: "95c8b54b18223a49cb2d99c5a81577ed993f24c3"
+      ref: a06c08297ca8611478b76313760ff70e7f1df70f
+      resolved-ref: a06c08297ca8611478b76313760ff70e7f1df70f
       url: "git@github.com:jaboyc/xcodeproj.git"
     source: git
     version: "0.2.3"
